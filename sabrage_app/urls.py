@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.conf.urls import url, include
 
 urlpatterns = [
-    url(r'^', include('sabrage.urls', namespace='sabrage')),
+    url(r'^sabrage/', include('sabrage.urls', namespace='sabrage')),
     url(r'^admin/', admin.site.urls),
 
 ]
