@@ -5,7 +5,7 @@ this app if you just want to install a runnable version of Sabrage.
 
 ## Development
 
-1. Create a virtualenv for the python packages:  
+1. Create a virtualenv for the python packages:
   * `python3 -m venv virtualenv`
 2. Use your new virtualenv:
   * `source virtualenv/bin/activate`
@@ -27,17 +27,19 @@ this app if you just want to install a runnable version of Sabrage.
 
 ### Heroku
 
-The application is set up to be deployable to Heroku. You just need to push
-it to your app there. Note that the databse in this default configuration
-is an SQLite file based database which should never ever be used for real
-on Heroku (and rarely anywhere else).
+The application is set up to be deployable to Heroku. You just need to create an app
+and push it. Note that the databse in this default configuration is an SQLite file 
+based database which should never ever be used for real on Heroku (and rarely anywhere else).
 
-`git push heroku master`
+1. `heroku create`
+2. `heroku git:remote`
+3. `git push heroku master`
+
 
 ### Apache
 
 To deploy the application with Apache mod_wsgi, have a look at the
-documentation here: https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/
+[documentation](https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/)
 
 You don't even need to care about the static files setup, as this app uses
 whitenoise to serve those through Django too.
