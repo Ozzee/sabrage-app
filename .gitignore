@@ -1,4 +1,4 @@
 __pycache__
 virtualenv
 db.sqlite3
-/staticfiles/*
+sabrage_app/staticfiles/
