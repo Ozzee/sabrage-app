@@ -16,9 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import url, include
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     url(r'^sabrage/', include('sabrage.urls', namespace='sabrage')),
     url(r'^admin/', admin.site.urls),
-
+    url(r'^$', RedirectView.as_view(url='/sabrage/', permanent=False))
 ]
