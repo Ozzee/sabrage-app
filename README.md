@@ -25,4 +25,19 @@ this app if you just want to install a runnable version of Sabrage.
 
 ## Installation
 
-TODO
+### Heroku
+
+The application is set up to be deployable to Heroku. You just need to push
+it to your app there. Note that the databse in this default configuration
+is an SQLite file based database which should never ever be used for real
+on Heroku (and rarely anywhere else).
+
+`git push heroku master`
+
+### Apache
+
+To deploy the application with Apache mod_wsgi, have a look at the
+documentation here: https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/modwsgi/
+
+You don't even need to care about the static files setup, as this app uses
+whitenoise to serve those through Django too.
