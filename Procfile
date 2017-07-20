@@ -1,0 +1,1 @@
+web: gunicorn sabrage_app.wsgi --log-file -
